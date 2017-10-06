@@ -1,6 +1,6 @@
 ## A Simple GUID creator package for PHP.
 
-This package is useful for creating unique GUID. It's under [MIT](https://github.com/sudiptpa/laravel-guid/LICENSE) license so it's free for everyone.
+This package is useful for creating unique GUID. It's under [MIT](https://github.com/sudiptpa/laravel-guid/blob/master/LICENSE) license so it's free for everyone.
 
 ### Installation
 
