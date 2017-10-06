@@ -18,7 +18,11 @@ If using Laravel 5, include the service provider within your `config/app.php` fi
 ```php
 'providers' => [
     Sujip\Guid\GuidServiceProvider::class,
-];
+]
+
+'aliases' => [
+   'Guid' => 'Sujip\Guid\Guid'
+]
 ```
 If you are a Laravel v5.5 user, this package has been configured for discovery, Laravel will automatically register its service providers and facades when it is installed, creating a convenient installation experience for you.
 
