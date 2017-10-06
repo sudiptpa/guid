@@ -28,6 +28,10 @@ class GuidServiceProvider extends ServiceProvider
     {
         include __DIR__ . '/helpers.php';
 
+        $this->app->bind('guid', function ($app) {
+            return new Guid;
+        });
+
         $this->app->booting(function () {
             $loader = AliasLoader::getInstance();
             $loader->alias('Guid', 'Sujip\Guid\Facades\Guid');
@@ -41,6 +45,6 @@ class GuidServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return array('guid');
+        return [];
     }
 }
