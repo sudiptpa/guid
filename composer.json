@@ -1,0 +1,39 @@
+{
+   "name": "sudiptpa/laravel-guid",
+   "description": "A Simple GUID generator Package for Laravel.",
+   "license": "MIT",
+   "type": "library",
+   "keywords": [
+      "guid"
+   ],
+   "authors": [
+      {
+         "name": "Sujip Thapa",
+         "email": "sudiptpa@gmail.com",
+         "homepage": "https://sujipthapa.co",
+         "role": "Senior Developer"
+      }
+   ],
+   "require": {
+      "php": ">=5.3.0"
+   },
+   "require-dev": {
+      "friendsofphp/php-cs-fixer": "~1.0"
+   },
+   "autoload": {
+      "psr-4": {
+         "Sujip\\Guid\\": "src/"
+      }
+   },
+   "minimum-stability": "stable",
+   "extra": {
+      "laravel": {
+         "providers": [
+            "Sujip\\Guid\\GuidServiceProvider"
+         ],
+         "aliases": {
+            "Guid": "Sujip\\Guid\\Guid"
+         }
+      }
+   }
+}
