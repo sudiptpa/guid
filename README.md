@@ -29,7 +29,9 @@ If you are a Laravel v5.5 user, this package has been configured for discovery, 
 #### Create GUID
 
 ```php
-echo "GUID: ". Guid::create();
+echo "GUID: " . Guid::create(); //example output : 2b23924f-0eaa-4133-848e-7ce1edeca8c9
+
+echo "GUID: " . guid(); // example output: 2b23924f-0eaa-4133-848e-7ce1edeca8c9
 
 ```
 
