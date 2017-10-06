@@ -36,7 +36,7 @@
                 "Sujip\\Guid\\GuidServiceProvider"
             ],
             "aliases": {
-                "Guid": "Sujip\\Guid\\Facade"
+                "Guid": "Sujip\\Guid\\Facades\\Guid"
             }
         }
     }
