@@ -7,7 +7,7 @@ This package is useful for creating unique GUID. It's under [MIT](https://github
 You can install the package via composer: [Composer](http://getcomposer.org/).
 
 ```php
-composer require sudiptpa/laravel-guid
+composer require sudiptpa/guid
 ```
 
 ### Usage
