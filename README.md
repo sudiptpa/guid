@@ -13,7 +13,7 @@ composer require sudiptpa/guid
 ### Usage
 
 #### Laravel
-If using Laravel 5, include the service provider within your `config/app.php` file.
+To consume the this package from Laravel application, register the package service provider within your `config/app.php` file.
 
 ```php
 'providers' => [
