@@ -5,9 +5,12 @@ use Sujip\Guid\Guid;
 if (!function_exists('guid')) {
     /**
      * @param $trim
+     * @return  string
      */
     function guid($trim = true)
     {
-        return (new Guid)->create($trim);
+        $guid = new Guid;
+
+        return $guid->create($trim);
     }
 }
