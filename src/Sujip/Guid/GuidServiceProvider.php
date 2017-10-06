@@ -28,10 +28,6 @@ class GuidServiceProvider extends ServiceProvider
     {
         include __DIR__ . '/helpers.php';
 
-        $this->app['guid'] = $this->app->share(function ($app) {
-            return new Guid;
-        });
-
         $this->app->booting(function () {
             $loader = AliasLoader::getInstance();
             $loader->alias('Guid', 'Sujip\Guid\Facades\Guid');
