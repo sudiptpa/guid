@@ -13,7 +13,7 @@ class Guid
  * Returns a GUID string
  *
  * Uses the best cryptographically secure method
- * for all supported pltforms with fallback to an older,
+ * for all supported platforms with fallback to an older,
  * less secure version.
  *
  * @param bool $trim
