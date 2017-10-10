@@ -11,7 +11,7 @@
          "name": "Sujip Thapa",
          "email": "sudiptpa@gmail.com",
          "homepage": "https://sujipthapa.co",
-         "role": "Senior Developer"
+         "role": "Developer"
       }
    ],
    "require": {
@@ -21,7 +21,7 @@
       "friendsofphp/php-cs-fixer": "~1.0"
    },
    "autoload": {
-      "psr-4": {
+      "psr-0": {
          "Sujip\\Guid\\": "src/"
       }
    },
