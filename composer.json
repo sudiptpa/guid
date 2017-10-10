@@ -19,7 +19,7 @@
       "php": ">=5.4.0"
    },
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "Sujip\\Guid\\": "src"
         }
     },
