@@ -6,6 +6,7 @@
    "keywords": [
       "guid"
    ],
+   "homepage": "https://github.com/sudiptpa/guid",
    "authors": [
       {
          "name": "Sujip Thapa",
@@ -17,9 +18,14 @@
    "require": {
       "php": ">=5.4.0"
    },
-   "autoload": {
-      "psr-4": {
-            "Sujip\\Guid\\": "src/"
+    "autoload": {
+        "psr-4": {
+            "Sujip\\Guid\\": "src"
         }
-   }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
 }
