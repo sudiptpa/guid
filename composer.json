@@ -6,7 +6,6 @@
    "keywords": [
       "guid"
    ],
-   "homepage": "https://github.com/sudiptpa/guid",
    "authors": [
       {
          "name": "Sujip Thapa",
@@ -18,14 +17,27 @@
    "require": {
       "php": ">=5.4.0"
    },
-    "autoload": {
-        "psr-0": {
-            "Sujip\\Guid\\": "src"
-        }
-    },
-    "extra": {
+   "require-dev": {
+      "friendsofphp/php-cs-fixer": "~1.0"
+   },
+   "autoload": {
+      "psr-0": {
+         "Sujip\\Guid\\": "src/"
+      }
+   },
+   "minimum-stability": "dev",
+   "prefer-stable": true,
+   "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "1.0.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Sujip\\Guid\\GuidServiceProvider"
+            ],
+            "aliases": {
+                "Guid": "Sujip\\Guid\\Facades\\Guid"
+            }
         }
     }
 }
