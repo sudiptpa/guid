@@ -11,33 +11,23 @@
          "name": "Sujip Thapa",
          "email": "sudiptpa@gmail.com",
          "homepage": "https://sujipthapa.co",
-         "role": "Senior Developer"
+         "role": "Developer"
       }
    ],
    "require": {
       "php": ">=5.4.0"
    },
-   "require-dev": {
-      "friendsofphp/php-cs-fixer": "~1.0"
-   },
    "autoload": {
       "psr-4": {
-         "Sujip\\Guid\\": "src/"
-      }
+            "Sujip\\Guid\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
    },
-   "minimum-stability": "dev",
-   "prefer-stable": true,
    "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
-        },
-        "laravel": {
-            "providers": [
-                "Sujip\\Guid\\GuidServiceProvider"
-            ],
-            "aliases": {
-                "Guid": "Sujip\\Guid\\Facades\\Guid"
-            }
         }
     }
 }
