@@ -20,9 +20,6 @@
    "autoload": {
       "psr-4": {
             "Sujip\\Guid\\": "src/"
-        },
-        "files": [
-            "src/helpers.php"
-        ]
+        }
    }
 }
