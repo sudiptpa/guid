@@ -47,13 +47,12 @@ echo "GUID: " . guid(); // example output: 2b23924f-0eaa-4133-848e-7ce1edeca8c9
 #### Outside Laravel
 
 ```php
-use Sujip\Guid\Guid;
 
 require __DIR__ . '/vendor/autoload.php';
 
-$guid = new Guid;
+$guid = new \Sujip\Guid\Guid;
 
-$guid = $guid->create();
+echo $guid->create();
 
 ````
 

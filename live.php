@@ -1,11 +1,7 @@
 <?php
 
-use Sujip\Guid\Guid;
-
 require __DIR__ . '/vendor/autoload.php';
 
-$guid = new Guid;
+$guid = new \Sujip\Guid\Guid;
 
-echo $guid->create() . "\n";
-
-exit();
+echo $guid->create();
