@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 class Guid extends Facade
 {
     /**
-     * Get the binding in the IoC container
+     * Get the binding in the IoC container.
      *
      * @return string
      */

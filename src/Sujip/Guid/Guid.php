@@ -3,23 +3,23 @@
 namespace Sujip\Guid;
 
 /**
- * Class Guid
- * @package Sujip\Guid
+ * Class Guid.
  */
 class Guid
 {
-
-/**
- * Returns a GUID string
- *
- * Uses the best cryptographically secure method
- * for all supported platforms with fallback to an older,
- * less secure version.
- *
- * @param bool $trim
- * @return string
- * @link http://php.net/manual/en/function.com-create-guid.php#119168
- */
+    /**
+     * Returns a GUID string.
+     *
+     * Uses the best cryptographically secure method
+     * for all supported platforms with fallback to an older,
+     * less secure version.
+     *
+     * @param bool $trim
+     *
+     * @return string
+     *
+     * @link http://php.net/manual/en/function.com-create-guid.php#119168
+     */
     public function create($trim = true)
     {
         // Windows
@@ -40,17 +40,17 @@ class Guid
         }
 
         // Fallback (PHP 4.2+)
-        mt_srand((double) microtime() * 10000);
+        mt_srand((float) microtime() * 10000);
         $charid = strtolower(md5(uniqid(rand(), true)));
         $hyphen = chr(45); // "-"
-        $lbrace = $trim ? "" : chr(123); // "{"
-        $rbrace = $trim ? "" : chr(125); // "}"
-        $guidv4 = $lbrace .
-        substr($charid, 0, 8) . $hyphen .
-        substr($charid, 8, 4) . $hyphen .
-        substr($charid, 12, 4) . $hyphen .
-        substr($charid, 16, 4) . $hyphen .
-        substr($charid, 20, 12) . $rbrace;
+        $lbrace = $trim ? '' : chr(123); // "{"
+        $rbrace = $trim ? '' : chr(125); // "}"
+        $guidv4 = $lbrace.
+        substr($charid, 0, 8).$hyphen.
+        substr($charid, 8, 4).$hyphen.
+        substr($charid, 12, 4).$hyphen.
+        substr($charid, 16, 4).$hyphen.
+        substr($charid, 20, 12).$rbrace;
 
         return $guidv4;
     }
