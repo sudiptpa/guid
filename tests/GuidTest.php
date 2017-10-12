@@ -7,7 +7,7 @@ class GuidTest extends TestCase
 {
     public function testInstanceOf()
     {
-        $class = new Guid;
+        $class = new Guid();
 
         $this->assertInstanceOf(Guid::class, $class);
     }

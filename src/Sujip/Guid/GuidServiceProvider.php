@@ -4,11 +4,9 @@ namespace Sujip\Guid;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
-use Sujip\Guid\Guid;
 
 /**
- * Class GuidServiceProvider
- * @package Sujip\Guid
+ * Class GuidServiceProvider.
  */
 class GuidServiceProvider extends ServiceProvider
 {
@@ -26,10 +24,10 @@ class GuidServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        include __DIR__ . '/helpers.php';
+        include __DIR__.'/helpers.php';
 
         $this->app->bind('guid', function ($app) {
-            return new Guid;
+            return new Guid();
         });
 
         $this->app->booting(function () {
