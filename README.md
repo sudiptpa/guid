@@ -2,9 +2,10 @@
 
 This package is useful for creating globally unique identifiers (GUID). It's under [MIT](https://github.com/sudiptpa/laravel-guid/blob/master/LICENSE) license so it's free for everyone.
 
-[![Latest Stable Version](https://poser.pugx.org/sudiptpa/guid/v/stable)](https://packagist.org/packages/sudiptpa/guid)
-[![Total Downloads](https://poser.pugx.org/sudiptpa/guid/downloads)](https://packagist.org/packages/sudiptpa/guid)
-[![License](https://poser.pugx.org/sudiptpa/guid/license)](https://packagist.org/packages/sudiptpa/guid)
+[![StyleCI](https://styleci.io/repos/105983665/shield?branch=master)](https://styleci.io/repos/105983665?format=flat)
+[![Latest Stable Version](https://poser.pugx.org/sudiptpa/guid/v/stable?format=flat-square)](https://packagist.org/packages/sudiptpa/guid)
+[![Total Downloads](https://poser.pugx.org/sudiptpa/guid/downloads?format=flat-square)](https://packagist.org/packages/sudiptpa/guid)
+[![License](https://poser.pugx.org/sudiptpa/guid/license?format=flat-square)](https://packagist.org/packages/sudiptpa/guid)
 
 ### Installation
 
