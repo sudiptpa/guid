@@ -15,7 +15,7 @@ composer require sudiptpa/guid
 ```
 If you want to use this package with Laravel v4.2 stick with the backward version `v0.0.1` in your composer.josn file.
 
-```
+```json
   "sudiptpa/guid": "v0.0.1"
 ```
 
