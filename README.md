@@ -80,3 +80,7 @@ If you are having general issues with the package, feel free to drop me and emai
 
 If you believe you have found a bug, please report it using the [GitHub issue tracker](https://github.com/sudiptpa/laravel-guid/issues),
 or better yet, fork the library and submit a pull request.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
