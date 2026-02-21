@@ -1,16 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 use Sujip\Guid\Guid;
 
 if (!function_exists('guid')) {
-    /**
-     * @param $trim
-     *
-     * @return string
-     */
-    function guid($trim = true)
+    function guid(bool $trim = true): string
     {
-        $guid = new Guid();
+        static $guid = null;
+        if (!$guid instanceof Guid) {
+            $guid = new Guid();
+        }
 
         return $guid->create($trim);
     }

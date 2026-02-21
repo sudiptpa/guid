@@ -1,86 +1,113 @@
-## A Simple GUID creator package for PHP.
+# GUID for PHP
 
-This package is useful for creating globally unique identifiers (GUID). It's under [MIT](https://github.com/sudiptpa/laravel-guid/blob/master/LICENSE) license so it's free for everyone.
+A minimal, dependency-free GUID generator for PHP with a tiny runtime footprint.
 
-[![StyleCI](https://styleci.io/repos/105983665/shield?branch=master)](https://styleci.io/repos/105983665?format=flat)
+[![CI](https://github.com/sudiptpa/guid/actions/workflows/ci.yml/badge.svg)](https://github.com/sudiptpa/guid/actions/workflows/ci.yml)
 [![Latest Stable Version](https://poser.pugx.org/sudiptpa/guid/v/stable?format=flat-square)](https://packagist.org/packages/sudiptpa/guid)
 [![Total Downloads](https://poser.pugx.org/sudiptpa/guid/downloads?format=flat-square)](https://packagist.org/packages/sudiptpa/guid)
 [![License](https://poser.pugx.org/sudiptpa/guid/license?format=flat-square)](https://packagist.org/packages/sudiptpa/guid)
 
-### Installation
+## Requirements
 
-You can install the package via composer: [Composer](http://getcomposer.org/).
+- PHP 8.2+
 
-```php
+## Compatibility
+
+- Supported and CI-tested on PHP 8.2, 8.3, 8.4, and 8.5.
+- Need legacy PHP support below 8.2? Use `sudiptpa/guid:^2.0`.
+
+## Installation
+
+```bash
 composer require sudiptpa/guid
 ```
-If you want to use this package with Laravel v4.2 stick with the backward version `v0.0.1` in your composer.josn file.
 
-```json
-"sudiptpa/guid": "v0.0.1"
-```
+## Usage
 
-### Usage
-
-#### Laravel
-To consume the this package from Laravel application, register the package service provider within your `config/app.php` file.
+### Basic usage
 
 ```php
-'providers' => [
-    Sujip\Guid\GuidServiceProvider::class,
-]
+<?php
 
-'aliases' => [
-   'Guid' => Sujip\Guid\Guid::class,
-]
-```
-If you are a Laravel v5.5 user, this package has been configured for discovery, Laravel will automatically register its service providers and facades when it is installed, creating a convenient installation experience for you.
+declare(strict_types=1);
 
-#### Create GUID
+use Sujip\Guid\Guid;
 
-```php
-echo "GUID: " . Guid::create(); //example output : 2b23924f-0eaa-4133-848e-7ce1edeca8c9
-
-echo "GUID: " . guid(); // example output: 2b23924f-0eaa-4133-848e-7ce1edeca8c9
-
-```
-
-#### Outside Laravel
-
-```php
-
-require __DIR__ . '/vendor/autoload.php';
-
-$guid = new \Sujip\Guid\Guid;
+$guid = new Guid();
 
 echo $guid->create();
-
-````
-
-### Output
-
-```php
-//Example: 2b23924f-0eaa-4133-848e-7ce1edeca8c9
-
+// Example: 2b23924f-0eaa-4133-848e-7ce1edeca8c9
 ```
 
-### Changelog
+### Global helper
 
-Please see [CHANGELOG](https://github.com/sudiptpa/laravel-guid/blob/master/CHANGELOG.md) for more information what has changed recently.
+```php
+<?php
 
-### Contributing
+declare(strict_types=1);
 
-Contributions are **welcome** and will be fully **credited**.
+echo guid();
+// Example: 2b23924f-0eaa-4133-848e-7ce1edeca8c9
 
-Contributions can be made via a Pull Request on [Github](https://github.com/sudiptpa/laravel-guid).
+echo guid(false);
+// Example: {2b23924f-0eaa-4133-848e-7ce1edeca8c9}
+```
 
-### Support
+### Extending generation behavior
 
-If you are having general issues with the package, feel free to drop me and email [sudiptpa@gmail.com](mailto:sudiptpa@gmail.com)
+Default usage is unchanged. If needed, provide your own generator:
 
-If you believe you have found a bug, please report it using the [GitHub issue tracker](https://github.com/sudiptpa/laravel-guid/issues),
-or better yet, fork the library and submit a pull request.
+```php
+<?php
+
+declare(strict_types=1);
+
+use Sujip\Guid\GeneratorInterface;
+use Sujip\Guid\Guid;
+
+final class CustomGenerator implements GeneratorInterface
+{
+    public function generate(bool $trim = true): string
+    {
+        return $trim ? 'custom-guid' : '{custom-guid}';
+    }
+}
+
+$guid = new Guid(new CustomGenerator());
+
+echo $guid->create(); // custom-guid
+```
+
+## Public API stability
+
+The package preserves the existing public behavior:
+
+- `Sujip\Guid\Guid::create(bool $trim = true): string`
+- `guid(bool $trim = true): string`
+
+No runtime dependencies are required, and default usage stays a single class or helper call.
+
+## Development
+
+```bash
+composer install
+composer lint
+composer stan
+composer test
+```
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Maintainer notes
+
+See [MAINTAINERS.md](MAINTAINERS.md).
 
 ## License
 
-The GUID package is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+MIT. See [LICENSE](LICENSE).
