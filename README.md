@@ -3,9 +3,10 @@
 A minimal, dependency-free GUID generator for PHP with a tiny runtime footprint.
 
 [![CI](https://github.com/sudiptpa/guid/actions/workflows/ci.yml/badge.svg)](https://github.com/sudiptpa/guid/actions/workflows/ci.yml)
-[![Latest Stable Version](https://poser.pugx.org/sudiptpa/guid/v/stable?format=flat-square)](https://packagist.org/packages/sudiptpa/guid)
-[![Total Downloads](https://poser.pugx.org/sudiptpa/guid/downloads?format=flat-square)](https://packagist.org/packages/sudiptpa/guid)
-[![License](https://poser.pugx.org/sudiptpa/guid/license?format=flat-square)](https://packagist.org/packages/sudiptpa/guid)
+[![Latest Version](https://img.shields.io/packagist/v/sudiptpa/guid)](https://packagist.org/packages/sudiptpa/guid)
+[![Downloads](https://img.shields.io/packagist/dt/sudiptpa/guid)](https://packagist.org/packages/sudiptpa/guid)
+[![License](https://img.shields.io/packagist/l/sudiptpa/guid)](https://packagist.org/packages/sudiptpa/guid)
+[![PHP Version](https://img.shields.io/packagist/php-v/sudiptpa/guid)](https://packagist.org/packages/sudiptpa/guid)
 
 ## Requirements
 
