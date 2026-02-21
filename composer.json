@@ -1,10 +1,13 @@
 {
   "name": "sudiptpa/guid",
   "type": "library",
-  "description": "A Simple GUID generator Package for PHP.",
+  "description": "A minimal GUID generator package for PHP.",
   "homepage": "https://github.com/sudiptpa/guid",
   "keywords": [
-    "guid"
+    "guid",
+    "uuid",
+    "identifier",
+    "php"
   ],
   "license": "MIT",
   "authors": [
@@ -15,6 +18,14 @@
       "role": "Web Developer"
     }
   ],
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.75",
+    "phpstan/phpstan": "^1.12",
+    "phpunit/phpunit": "^11.5"
+  },
   "autoload": {
     "files": [
       "src/helpers.php"
@@ -23,26 +34,21 @@
       "Sujip\\Guid\\": "src/"
     }
   },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
-    },
-    "laravel": {
-      "aliases": {
-        "Guid": "Sujip\\Guid\\Facades\\Guid"
-      },
-      "providers": [
-        "Sujip\\Guid\\GuidServiceProvider"
-      ]
+  "autoload-dev": {
+    "psr-4": {
+      "Sujip\\Guid\\Tests\\": "tests/"
     }
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "require": {
-    "php": ">=5.4.0"
+  "scripts": {
+    "test": "phpunit --configuration phpunit.xml",
+    "stan": "phpstan analyse --configuration=phpstan.neon --no-progress --debug",
+    "lint": "php-cs-fixer fix --dry-run --diff --sequential --config=.php-cs-fixer.dist.php",
+    "lint:fix": "php-cs-fixer fix --sequential --config=.php-cs-fixer.dist.php"
   },
-  "require-dev": {
-    "friendsofphp/php-cs-fixer": "~1.0"
+  "extra": {
+    "branch-alias": {
+      "dev-master": "3.0.x-dev"
+    }
   },
   "support": {
     "issues": "https://github.com/sudiptpa/guid/issues",
