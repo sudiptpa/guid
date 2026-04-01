@@ -2,11 +2,15 @@
 
 A minimal, dependency-free GUID generator for PHP with a tiny runtime footprint.
 
-[![CI](https://github.com/sudiptpa/guid/actions/workflows/ci.yml/badge.svg)](https://github.com/sudiptpa/guid/actions/workflows/ci.yml) [![Sponsor](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/sudiptpa)
+[![CI](https://github.com/sudiptpa/guid/actions/workflows/ci.yml/badge.svg)](https://github.com/sudiptpa/guid/actions/workflows/ci.yml)
 [![Latest Version](https://img.shields.io/packagist/v/sudiptpa/guid)](https://packagist.org/packages/sudiptpa/guid)
 [![Downloads](https://img.shields.io/packagist/dt/sudiptpa/guid)](https://packagist.org/packages/sudiptpa/guid)
 [![License](https://img.shields.io/packagist/l/sudiptpa/guid)](https://packagist.org/packages/sudiptpa/guid)
 [![PHP Version](https://img.shields.io/packagist/php-v/sudiptpa/guid)](https://packagist.org/packages/sudiptpa/guid)
+
+---
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/sudiptpa)
 
 If this package has been useful to you, GitHub Sponsors is a simple way to support ongoing maintenance, improvements, and future releases.
 
