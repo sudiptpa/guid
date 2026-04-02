@@ -1,6 +1,6 @@
-# GUID for PHP
+# GUID (Globally Unique Identifier) for PHP
 
-A minimal, dependency-free GUID generator for PHP with a tiny runtime footprint.
+A minimal, dependency-free GUID (Globally Unique Identifier) generator for PHP with a tiny runtime footprint. Frequently also called UUIDs (Universally Unique Identifiers).
 
 [![CI](https://github.com/sudiptpa/guid/actions/workflows/ci.yml/badge.svg)](https://github.com/sudiptpa/guid/actions/workflows/ci.yml)
 [![Latest Version](https://img.shields.io/packagist/v/sudiptpa/guid)](https://packagist.org/packages/sudiptpa/guid)
